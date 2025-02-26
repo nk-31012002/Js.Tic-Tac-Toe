@@ -50,3 +50,17 @@ function switchPlayer() {
 }
 
 
+function mousePressed() {
+  let w = width / 3;
+  let h = height / 3;
+  let i = floor(mouseX / w);
+  let j = floor(mouseY / h);
+
+  if (board[j][i] == '') {
+    board[j][i] = players[currentPlayer];
+    switchPlayer();
+  }
+}
+
+
+
