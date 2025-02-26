@@ -12,3 +12,12 @@ function drawGrid() {
   line(0, h, width, h);
   line(0, h * 2, width, h * 2);
 }
+
+let board = [
+  ['', '', ''],
+  ['', '', ''],
+  ['', '', '']
+];
+
+let players = ['X', 'O'];
+let currentPlayer = 0;
