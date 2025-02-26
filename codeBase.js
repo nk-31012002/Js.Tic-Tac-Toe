@@ -1,1 +1,4 @@
-// Project initialized and base file created
+function setup() {
+  createCanvas(400, 400);
+  frameRate(30);
+}
