@@ -79,6 +79,51 @@ function checkWinner() {
 
 
 
+if (equals3(board[0][0], board[1][1], board[2][2])) {
+  winner = board[0][0];
+}
+if (equals3(board[2][0], board[1][1], board[0][2])) {
+  winner = board[2][0];
+}
+
+
+
+if (winner == null && board.flat().every(cell => cell != '')) {
+  return 'tie';
+} else {
+  return winner;
+}
+
+
+
+
+function showResult(result) {
+  let resultP = createP('');
+  resultP.style('font-size', '32pt');
+  if (result == 'tie') {
+    resultP.html("Tie!");
+  } else {
+    resultP.html(`${result} wins!`);
+  }
+}
+
+
+function draw() {
+  background(255);
+  drawGrid();
+  drawMarks();
+  let result = checkWinner();
+  if (result != null) {
+    noLoop();
+    showResult(result);
+  }
+}
+
+
+
+
+
+
 
 
 
