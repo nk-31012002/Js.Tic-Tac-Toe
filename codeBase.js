@@ -43,3 +43,10 @@ function drawMarks() {
     }
   }
 }
+
+
+function switchPlayer() {
+  currentPlayer = (currentPlayer + 1) % players.length;
+}
+
+
