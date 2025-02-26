@@ -62,5 +62,23 @@ function mousePressed() {
   }
 }
 
+function equals3(a, b, c) {
+  return (a == b && b == c && a != '');
+}
+
+function checkWinner() {
+  let winner = null;
+
+  for (let i = 0; i < 3; i++) {
+    if (equals3(board[i][0], board[i][1], board[i][2])) {
+      winner = board[i][0];
+    }
+  }
+}
+
+
+
+
+
 
 
